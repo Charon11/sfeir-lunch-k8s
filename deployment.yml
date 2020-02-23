@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sfeir-lunch-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sfeir-lunch-deploy
+  template:
+    metadata:
+      labels: 
+        app: sfeir-lunch-deploy
+    spec:
+     containers:
+     - name: sfeir-lunch-deploy
+       image: nginx
+       resources:
+        limits:
+          memory: "128Mi"
+          cpu: "100m"

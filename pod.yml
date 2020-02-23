@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: pod
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: pod
+  name: sfeir-lunch-config
+data:
+  sfeir: lunch
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  namespace: pod
+  name: sfeir-lunch
+  labels:
+    name: sfeir-lunch
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    envFrom:
+    - configMapRef:
+        name: sfeir-lunch-config
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "100m"
+    ports:
+      - containerPort: 8080
+  - name: fluentd
+    image: fluent/fluentd
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "100m"

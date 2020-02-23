@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sfeir-lunch-service
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    nodePort: 32000
+  selector:
+    app: sfeir-lunch-deploy
+  type: NodePort
