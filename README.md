@@ -75,7 +75,7 @@ Show deployment
 kubectl get svc
 
 NAME                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)        AGE
-sfeir-lunch-service   NodePort    10.96.145.7   <none>        80:32000/TCP   29s
+sfeir-lunch-service   ClusterIP   10.96.126.231   <none>        80/TCP    19s
 ```
 
 # Ingress

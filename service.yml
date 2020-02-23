@@ -6,7 +6,6 @@ spec:
   ports:
   - port: 80
     protocol: TCP
-    nodePort: 32000
   selector:
     app: sfeir-lunch-deploy
-  type: NodePort
+  type: ClusterIP
