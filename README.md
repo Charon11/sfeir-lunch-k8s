@@ -1,6 +1,6 @@
-![sfeir-lunch-logo](https://raw.githubusercontent.com/Charon11/sfeir-lunch-k8s/master/doc/85259543_497659104232764_6938243096563941376_n.png)
+# Sfeir Lunch Kubernetes
 
-# Install Minikube
+## Install Minikube
 Start by installing minikube with 
 ```shell 
 brew cask install minikube
@@ -26,7 +26,7 @@ minikube dashboard
 ```
 
 
-# Pod
+## Pod
 Add pod from pod.yml
 ```shell
 kubectl apply -f pod.yml
@@ -44,7 +44,7 @@ NAME          READY   STATUS    RESTARTS   AGE
 sfeir-lunch   2/2     Running   0          6s
 ```
 
-# Deployment
+## Deployment
 
 Add deployment from deployment.yml
 ```shell
@@ -61,7 +61,7 @@ NAME                 READY   UP-TO-DATE   AVAILABLE   AGE
 sfeir-lunch-deploy   3/3     3            3           62s
 ```
 
-# Service
+## Service
 
 Add service from service.yml
 ```shell
@@ -78,7 +78,7 @@ NAME                  TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)        AGE
 sfeir-lunch-service   ClusterIP   10.96.126.231   <none>        80/TCP    19s
 ```
 
-# Ingress
+## Ingress
 
 Add ingress from ingress.yml
 ```shell
