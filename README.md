@@ -70,7 +70,7 @@ kubectl apply -f service.yml
 service/sfeir-lunch-service created
 ```
 
-Show deployment
+Show service
 ```shell
 kubectl get svc
 
@@ -87,7 +87,7 @@ kubectl apply -f ingress.yml
 ingress.networking.k8s.io/sfeir-lunch-ingress created
 ```
 
-Show deployment
+Show ingress
 ```shell
 kubectl get ingresses
 
